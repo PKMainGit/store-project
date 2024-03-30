@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# any files
+README.md
+README.pl.md
+README.ro.md
+README.ru.md

@@ -1,6 +1,6 @@
 /* Fonts */
 
-@font-face {
+/* @font-face {
 	font-family: 'DMSans';
 	font-style: normal;
 	font-weight: 400;
@@ -54,7 +54,7 @@
 	font-style: italic;
 	font-weight: 900;
 	src: url(../fonts/DMSans-BlackItalic.ttf);
-}
+} */
 
 * {
 	margin: 0;
@@ -250,53 +250,30 @@ summary {
 }
 
 .container {
-	width: 375px;
-	padding: 0 20px;
-	margin: 0 auto;
 }
 
-.left-side {
-	margin-bottom: 40px;
+@media screen and (min-width: 375px) {
+	.container {
+	}
 }
 
-.right-side {
-	padding-bottom: 80px;
+@media screen and (min-width: 425px) {
+	.container {
+	}
 }
 
 @media screen and (min-width: 768px) {
 	.container {
-		width: 768px;
-		padding: 0 32px;
-		margin: 0 auto;
 	}
+}
 
-	.left-side {
-		margin-bottom: 100px;
-		display: flex;
-		gap: 32px;
-	}
-
-	.right-side {
-		padding-bottom: 100px;
+@media screen and (min-width: 1024px) {
+	.container {
 	}
 }
 
 @media screen and (min-width: 1440px) {
 	.container {
-		width: 1440px;
-		padding: 0 24px;
-		margin: 0 auto;
-		display: flex;
-		gap: 40px;
-	}
-
-	.left-side {
-		display: block;
-		margin-bottom: 0;
-	}
-
-	.right-side {
-		padding-bottom: 72px;
 	}
 }
 
