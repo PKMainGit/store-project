@@ -1,0 +1,17 @@
+.sidebar {
+  width: 400px;
+  border: 1px solid red;
+  padding: 0 10px;
+	display: none;
+}
+
+.categories {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 26px;
+  text-align: center;
+}
+
+.categories:last-child {
+  margin-bottom: 0;
+}

@@ -1,4 +1,5 @@
 .header {
+  position: absolute;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -8,6 +9,7 @@
   border-bottom: 1px solid gray;
   background: transparent;
   height: 100px;
+  width: 100%;
 }
 
 .news-container {
@@ -15,7 +17,6 @@
   display: flex;
   align-items: center;
   width: 100vw;
-  max-width: 100%;
   height: 42px;
   margin: 0 auto;
   overflow: hidden;
@@ -75,7 +76,7 @@
   height: 3px;
   background-color: whitesmoke;
   margin-bottom: 5px;
-	color: rgb(255, 38, 0);
+  color: rgb(255, 38, 0);
 }
 
 .menu-icon-elem:last-child {
@@ -87,8 +88,9 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
-  background-color: gray;
+  height: 100vh;
+  background: linear-gradient(rgba(5, 5, 5, 1), rgba(5, 5, 5, 0)), url(../img/bcg.jpg);
+  background-size: cover;
   opacity: 0;
   padding: 10px 0;
   transform: scale(0);
@@ -125,6 +127,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   color: white;
+  padding: 10px;
 }
 
 .menu-item:last-child {
@@ -132,7 +135,7 @@
 }
 
 .profile {
-  min-width: 300px;
+  min-width: 250px;
   max-width: 500px;
   height: 50px;
   border: 1px solid red;
@@ -141,6 +144,54 @@
 
 .banner {
   display: none;
+}
+
+.products-menu-icon {
+  width: 20px;
+  transition: all 1s ease;
+}
+
+.products-mob-menu:hover .products-menu-icon {
+  width: 30px;
+}
+
+.products-mob-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.product-list-mob {
+  border: 1px solid red;
+  padding: 20px;
+  overflow: hidden;
+  visibility: hidden;
+  transform: scaleY(0);
+  width: 500px;
+  height: 0;
+  position: absolute;
+  top: -500px;
+  transition: all 1s ease;
+}
+
+.product-list-mob.show {
+  overflow: visible;
+  visibility: visible;
+  transform: scaleY(1);
+  height: 500px;
+}
+
+.list-mob-item {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.list-mob-item:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -152,7 +203,10 @@
 @media screen and (min-width: 375px) {
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 682px) {
+  .products-mob-menu {
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -166,6 +220,11 @@
     transform: scale(1);
     opacity: 1;
   }
+
+  .products-mob-menu {
+    flex-direction: row;
+  }
+
   .logo-menu {
     display: none;
   }
@@ -197,6 +256,55 @@
 
   .menu-icon {
     display: none;
+  }
+
+  .products-menu-icon {
+    width: 20px;
+    transition: all 1s ease;
+  }
+
+  .products-menu:hover .products-menu-icon {
+    width: 30px;
+  }
+
+  .products-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    cursor: pointer;
+  }
+
+  .product-list {
+    border: 1px solid red;
+    padding: 20px;
+    overflow: hidden;
+    visibility: hidden;
+    transform: scaleY(0);
+    width: 500px;
+    height: 0;
+    position: absolute !important;
+    top: 100px;
+    transition: all 1s ease;
+  }
+
+  .product-list.show {
+    overflow: visible;
+    visibility: visible;
+    transform: scaleY(1);
+    height: 500px;
+    position: absolute !important;
+  }
+
+  .list-item {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+  }
+
+  .list-item:last-child {
+    margin-bottom: 0;
   }
 
   .banner {
