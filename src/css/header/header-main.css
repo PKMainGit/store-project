@@ -10,13 +10,14 @@
   background: transparent;
   height: 100px;
   width: 100%;
+  max-width: 1440px;
 }
 
 .news-container {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 42px;
   margin: 0 auto;
   overflow: hidden;
@@ -65,6 +66,19 @@
   font-size: 20px;
   font-weight: 700;
   color: white;
+  transition: all 250ms ease;
+}
+
+.logo-img {
+  transition: all 250ms ease;
+}
+
+.logo:hover .logo-text {
+  font-size: 26px;
+}
+
+.logo:hover .logo-img {
+  width: 60px;
 }
 
 .navigation {
@@ -142,10 +156,6 @@
   margin: 0 auto;
 }
 
-.banner {
-  display: none;
-}
-
 .products-menu-icon {
   width: 20px;
   transition: all 1s ease;
@@ -161,7 +171,6 @@
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  cursor: pointer;
 }
 
 .product-list-mob {
@@ -192,6 +201,10 @@
 
 .list-mob-item:last-child {
   margin-bottom: 0;
+}
+
+.banner {
+  display: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -252,6 +265,11 @@
     margin-bottom: 0;
     font-size: 20px;
     font-weight: 700;
+    transition: all 250ms ease-in-out;
+  }
+
+  .menu-item:hover {
+    font-size: 26px;
   }
 
   .menu-icon {
@@ -273,11 +291,12 @@
     justify-content: center;
     gap: 10px;
     flex-wrap: nowrap;
-    cursor: pointer;
   }
 
   .product-list {
-    border: 1px solid red;
+    border-radius: 50px;
+    box-shadow: 0px 7px 10px white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     padding: 20px;
     overflow: hidden;
     visibility: hidden;
@@ -290,26 +309,78 @@
   }
 
   .product-list.show {
-    overflow: visible;
+		overflow: auto;
+		scrollbar-width: none; /* Скрыть скроллбар в Firefox */
+    -ms-overflow-style: none; /* Скрыть скроллбар в IE and Edge */
     visibility: visible;
     transform: scaleY(1);
-    height: 500px;
+    height: 400px;
     position: absolute !important;
   }
 
+	.product-list::-webkit-scrollbar {
+    display: none; /* Скрыть скроллбар в Chrome и Safari */
+}
+
   .list-item {
-    text-align: center;
+    border-bottom: 1px solid white;
+    border-radius: 10px 10px 10px 10px;
+    max-width: 250px;
+    margin: 0 auto;
     margin-bottom: 20px;
-    padding: 10px 0;
+    background: none;
+    background-position: top -80px left 0;
+    background-repeat: no-repeat;
+    transition: all 750ms ease-out;
   }
 
   .list-item:last-child {
     margin-bottom: 0;
   }
 
+  .list-item:hover {
+    animation: border-category 500ms ease-out forwards;
+    border-bottom: 1px solid blue;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    border-top: 1px solid blue;
+    background: linear-gradient(to bottom, rgb(255, 0, 0), rgba(0, 0, 0, 0));
+    box-shadow: 0 -5px 20px red;
+    background-position: top 0 left 0;
+    background-repeat: no-repeat;
+  }
+
+  .list-item-link {
+    text-align: center;
+    display: inline-block;
+    padding: 20px 20px;
+    width: 250px;
+  }
+
   .banner {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 500px;
+  }
+}
+
+@keyframes border-category {
+  0% {
+    border-bottom: 1px solid white;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+  }
+  50% {
+    border-bottom: 2px solid blue;
+    border-left: 2px solid blue;
+    border-right: 2px solid blue;
+    border-top: 2px solid transparent;
+  }
+  100% {
+    border-bottom: 3px solid blue;
+    border-left: 3px solid blue;
+    border-right: 3px solid blue;
+    border-top: 3px solid blue;
   }
 }

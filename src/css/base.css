@@ -100,11 +100,12 @@ ul {
 
 a {
   text-decoration: none;
+	cursor: none;
 }
 
-button {
+/* button {
   cursor: pointer;
-}
+} */
 
 img {
   display: block;
@@ -130,11 +131,12 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   tab-size: 4;
+	cursor: none;
 }
 
 body {
   margin: 0;
-  background: linear-gradient(rgba(5, 5, 5, 0.5), rgba(5, 5, 5, 0.5)), url(../img/bcg.jpg);
+  background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.5)), url(../img/bcg.jpg);
   background-size: cover;
 }
 
@@ -256,6 +258,7 @@ summary {
 .container {
   max-width: 1440px;
   background-color: transparent;
+	margin: 0 auto;
 }
 
 .main-container {

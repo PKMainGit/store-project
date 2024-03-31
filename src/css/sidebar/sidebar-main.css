@@ -1,17 +1,107 @@
 .sidebar {
+	position: relative;
   width: 400px;
-  border: 1px solid red;
-  padding: 0 10px;
-	display: none;
+  padding: 0 10px 60px 10px;
+  display: none;
+  margin-bottom: 2000px;
+	max-height: 500px;
+	overflow: auto;
+	scrollbar-width: none; /* Скрыть скроллбар в Firefox */
+  -ms-overflow-style: none; /* Скрыть скроллбар в IE and Edge */
+	border-radius: 50px;
+  box-shadow: 0px 7px 10px white;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
-.categories {
-  color: white;
-  margin-bottom: 10px;
-  font-size: 26px;
-  text-align: center;
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* Скрыть скроллбар в Chrome и Safari */
 }
 
-.categories:last-child {
-  margin-bottom: 0;
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 425px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    display: block;
+  }
+
+  .categories-title {
+		padding: 20px 0 10px 0;
+    color: white;
+		background-color: black;
+		position: sticky;
+		top: 0;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    border-bottom: 1px solid white;
+    border-radius: 0 0 10px 10px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+
+  .categories {
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    border-radius: 10px 10px 10px 10px;
+    max-width: 250px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background: none;
+    background-position: top -80px left 0;
+    background-repeat: no-repeat;
+    transition: all 750ms ease-out;
+		cursor: none;
+  }
+
+  .categories:last-child {
+    margin-bottom: 0;
+  }
+
+  .categories:hover {
+    animation: border-category 500ms ease-out forwards;
+    border-bottom: 1px solid blue;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    border-top: 1px solid blue;
+    background: linear-gradient(to bottom, rgb(255, 0, 0), rgba(0, 0, 0, 0));
+    box-shadow: 0 -5px 20px red;
+    background-position: top 0 left 0;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+@keyframes border-category {
+  0% {
+    border-bottom: 1px solid white;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+  }
+  50% {
+    border-bottom: 2px solid blue;
+    border-left: 2px solid blue;
+    border-right: 2px solid blue;
+    border-top: 2px solid transparent;
+  }
+  100% {
+    border-bottom: 3px solid blue;
+    border-left: 3px solid blue;
+    border-right: 3px solid blue;
+    border-top: 3px solid blue;
+  }
 }
