@@ -263,6 +263,7 @@ summary {
 
 .main-container {
 	display: flex;
+	padding: 0 20px;
 }
 
 @media screen and (min-width: 375px) {
