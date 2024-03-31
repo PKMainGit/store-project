@@ -6,7 +6,6 @@ const dropdownMobMenu = document.getElementById('product-list-mob-js');
 const productsMenu = document.getElementById('products-js');
 const dropdownMenu = document.getElementById('product-list-js');
 
-
 menuIcon.addEventListener('click', showMenu);
 closeMenuIcon.addEventListener('click', closeMenu);
 
@@ -19,8 +18,8 @@ function closeMenu() {
 }
 
 productsMobMenu.addEventListener('click', function () {
-	dropdownMobMenu.classList.toggle('show');
-	console.log('click');
+  dropdownMobMenu.classList.toggle('show');
+  console.log('click');
   const dropdownMobMenuClass = dropdownMobMenu.getAttribute('class');
   if (dropdownMobMenuClass.includes('show')) {
     dropdownMobMenu.style.position = 'static';
@@ -41,8 +40,7 @@ document.addEventListener('click', function (event) {
 });
 
 productsMenu.addEventListener('click', function () {
-	dropdownMenu.classList.toggle('show');
-	console.log('click');
+  dropdownMenu.classList.toggle('show');
   const dropdownMenuClass = dropdownMenu.getAttribute('class');
   if (dropdownMenuClass.includes('show')) {
     dropdownMenu.style.position = 'static';
@@ -61,5 +59,3 @@ document.addEventListener('click', function (event) {
     }, 600);
   }
 });
-
-
