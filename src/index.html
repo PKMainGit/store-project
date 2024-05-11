@@ -12,16 +12,25 @@
     <header>
 			<div class="news-container">
   			<div class="news">
-    			<p class="news-text">Hello, you have -50% sale</p>
-    			<p class="news-text">Hello, you have -50% sale</p>
-    			<p class="news-text">Hello, you have -50% sale</p>
-    			<p class="news-text">Hello, you have -50% sale</p>
-    			<p class="news-text">Hello, you have -50% sale</p>
-    			<p class="news-text">Hello, you have -50% sale</p>
-    			<p class="news-text">Hello, you have -50% sale</p>
-    			<p class="news-text">Hello, you have -50% sale</p>
+    			<p class="news-text" id="news"></p>
+    			<p class="news-text" id="news"></p>
+    			<p class="news-text" id="news"></p>
+    			<p class="news-text" id="news"></p>
+    			<p class="news-text" id="news"></p>
+    			<p class="news-text" id="news"></p>
+    			<p class="news-text" id="news"></p>
+    			<p class="news-text" id="news"></p>
   			</div>
 			</div>
+
+			<script>
+				const news = document.querySelectorAll('#news');
+				const newsText = `Hello, you have -50% sale`
+				news.forEach(newsPosinion => {
+					newsPosinion.textContent = newsText;
+				});
+			</script>
+
 			<div class="container">
 				<load src="./partials/header/header-main.html" />
 			</div>

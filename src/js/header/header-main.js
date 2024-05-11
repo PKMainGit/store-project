@@ -1,3 +1,5 @@
+import './header-menu-render'
+
 const menu = document.getElementById('menu-js');
 const menuIcon = document.getElementById('menu-icon-js');
 const closeMenuIcon = document.getElementById('close-menu-icon');
@@ -13,13 +15,12 @@ function showMenu() {
   menu.classList.add('show-menu');
 }
 
-function closeMenu() {
+export function closeMenu() {
   menu.classList.remove('show-menu');
 }
 
-productsMobMenu.addEventListener('click', function () {
+productsMobMenu.addEventListener('mouseover', function () {
   dropdownMobMenu.classList.toggle('show');
-  console.log('click');
   const dropdownMobMenuClass = dropdownMobMenu.getAttribute('class');
   if (dropdownMobMenuClass.includes('show')) {
     dropdownMobMenu.style.position = 'static';
@@ -39,7 +40,7 @@ document.addEventListener('click', function (event) {
   }
 });
 
-productsMenu.addEventListener('click', function () {
+productsMenu.addEventListener('mouseover', function () {
   dropdownMenu.classList.toggle('show');
   const dropdownMenuClass = dropdownMenu.getAttribute('class');
   if (dropdownMenuClass.includes('show')) {

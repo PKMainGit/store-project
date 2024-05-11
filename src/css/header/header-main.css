@@ -9,9 +9,10 @@
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0);
   border-bottom: 1px solid gray;
   background: transparent;
-  height: 100px;
+  height: 100%;
   width: 100%;
   max-width: 1440px;
+	margin-bottom: 50px;
 }
 
 .news-container {
@@ -72,15 +73,13 @@
 }
 
 .logo-img {
-  transition: all 250ms ease;
-}
-
-.logo:hover .logo-text {
-  font-size: 26px;
+	width: 300px;
+	transform: scale(1);
+	transition: all 250ms ease;
 }
 
 .logo:hover .logo-img {
-  width: 60px;
+  transform: scale(1.2);
 }
 
 .navigation {
@@ -101,7 +100,7 @@
 
 .menu {
   /* display: none; */
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   width: 100%;
   height: 100vh;
@@ -298,11 +297,12 @@
     margin-bottom: 0;
     font-size: 20px;
     font-weight: 700;
+		transform: scale(1);
     transition: all 250ms ease-in-out;
   }
 
   .menu-item:hover {
-    font-size: 26px;
+    transform: scale(1.1);
   }
 
   .menu-icon {
@@ -311,11 +311,12 @@
 
   .products-menu-icon {
     width: 20px;
+		transform: scale(1);
     transition: all 1s ease;
   }
 
   .products-menu:hover .products-menu-icon {
-    width: 30px;
+    transform: scale(1.1);
   }
 
   .products-menu {
@@ -417,3 +418,10 @@
     border-top: 3px solid blue;
   }
 } */
+
+.place {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+}

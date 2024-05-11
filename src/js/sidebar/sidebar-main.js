@@ -1,1 +1,1 @@
-
+import './render-sidebar'
